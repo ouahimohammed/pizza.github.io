@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commande de Pizzas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <fieldset class="form-section">
+            <legend>Vente PIZZA</legend>
+            <form id="commandePizza">
+                <label for="nom">Nom du client :</label>
+                <input type="text" id="nom" name="nom" required><br>
+
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required><br>
+
+                <label for="pizza">Choisissez votre pizza :</label>
+                <select id="pizza" name="pizza">
+                    <option value="P01">Pizza 4 fromages - 80DH</option>
+                    <option value="P02">Pizza Viande Hachée - 120DH</option>
+                    <option value="P03">Pizza Herbo - 75DH</option>
+                    <option value="P04">Pizza Fruits de mer - 120DH</option>
+                </select>
+
+                <label for="quantite">Quantité :</label>
+                <input type="number" id="quantite" name="quantite" min="1" max="10" required><br>
+
+                <button type="button" id="ajouterBtn" onclick="ajouter()">Ajouter</button>
+                <button type="button" id="annulerBtn">Annuler</button>
+                
+                <hr>
+
+                <label for="paiement">Paiement Par :</label><br>
+                <input type="radio" id="carte" name="paiement" value="carte" checked>
+                <label for="carte">Carte bancaire</label>
+
+                <input type="radio" id="cheque" name="paiement" value="cheque">
+                <label for="cheque">Chèque</label><br>
+
+                <label for="carteBancaire">Numéro de carte bancaire :</label>
+                <input type="text" id="carteBancaire" name="carteBancaire" ><br>
+                <button type="submit">Envoyer</button>
+                <p style="display: flex; justify-self: center;">Merci pour votre visite, le montant total est :
+                    <input type="text" id="montantTotal" style="width: 100px; height: 18px;" readonly> DH
+                </p>
+                
+            </form>
+        </fieldset>
+
+        <div class="table-section">
+            <table id="tableauArticles">
+                <thead>
+                    <tr>
+                        <th>Nom Pizza</th>
+                        <th>Prix unitaire</th>
+                        <th>Quantité</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les articles choisis apparaîtront ici -->
+                </tbody>
+            </table>
+
+            <!-- Section pour le montant total et le bouton Enregistrer -->
+            <div class="total-section">
+                <h2>Montant total : <span id="total">0</span> DH</h2>
+                <button type="button" id="enregistrerBtn" >Enregistrer</button>
+            </div>
+        </div>
+    </div>
+    <footer>@PIZZA HUT MAROC2019/2020</footer>
+    <script src="exe1.js"></script>
+</body>
+</html>

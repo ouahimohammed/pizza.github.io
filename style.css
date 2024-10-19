@@ -1,0 +1,57 @@
+header{
+    background-image: url('img/piza.jpg');
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .form-section {
+    width: 45%;
+  }
+  
+  .table-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .total-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button {
+    margin: 10px 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+footer{
+    background-color: #f5c117;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 96%;
+}
